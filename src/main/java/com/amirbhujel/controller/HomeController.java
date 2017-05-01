@@ -20,6 +20,7 @@ public class HomeController {
 
     @RequestMapping("/")
     public String home(){
+
         return "home";
     }
 
@@ -31,5 +32,12 @@ public class HomeController {
         model.addAttribute("products", products);  //model is automatically attached to the view
 
         return "productList";
+    }
+
+    @RequestMapping("/productList/viewProduct")
+    public String viewProduct(){
+
+        return "viewProduct";
+
     }
 }

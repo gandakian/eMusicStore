@@ -1,20 +1,8 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: amirbhujel
-  Date: 4/29/17
-  Time: 12:23 AM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %> //for including the other external file
+
 <%@include file="/WEB-INF/views/template/header.jsp"%>
 
-<!-- Marketing messaging and featurettes
-================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
 
 <div class="container-wrapper">
 
@@ -48,5 +36,4 @@
             </c:forEach>
         </table>
         
-<%@include file="/WEB-INF/views/template/footer.jsp"%>        
-        
+<%@include file="/WEB-INF/views/template/footer.jsp"%>
