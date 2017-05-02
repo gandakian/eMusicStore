@@ -1,5 +1,7 @@
 
-<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %> //for including the other external file
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+//for including the other external file
 
 <%@include file="/WEB-INF/views/template/header.jsp"%>
 
@@ -22,6 +24,7 @@
                 <th>Category</th>
                 <th>Condition</th>
                 <th>Price</th>
+                <th></th>
             </tr>
             </thead>
 
@@ -32,6 +35,8 @@
                 <td>${product.productCategory}</td>
                 <td>${product.productCondition}</td>
                 <td>${product.productPrice} USD</td>
+                <td><a href="<spring:url value="/productList/viewProduct/${product.productId}" />" >
+                    <span class="glyphicon glyphicon-info-sign"></span></a></td>
             </tr>
             </c:forEach>
         </table>
