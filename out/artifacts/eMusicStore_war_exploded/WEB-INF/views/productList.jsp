@@ -1,8 +1,8 @@
 
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-//for including the other external file
 
+<%-- for including the other external file --%>
 <%@include file="/WEB-INF/views/template/header.jsp"%>
 
 
