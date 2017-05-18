@@ -10,7 +10,7 @@
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
 <%-- for including the other external file --%>
-<%@include file="/WEB-INF/views/template/header.jsp"%>
+<%@include file="/WEB-INF/views/template/header.jsp" %>
 
 
 <div class="container-wrapper">
@@ -42,12 +42,16 @@
                     <td>${product.productCategory}</td>
                     <td>${product.productCondition}</td>
                     <td>${product.productPrice} USD</td>
-                    <td><a href="<spring:url value="/productList/viewProduct/${product.productId}" />" >
-                        <span class="glyphicon glyphicon-info-sign"></span></a></td>
+                    <td>
+                        <a href="<spring:url value="/productList/viewProduct/${product.productId}" />">
+                            <span class="glyphicon glyphicon-info-sign"></span></a>
+                        <a href="<spring:url value="/admin/productInventory/deleteProduct/${product.productId}" />">
+                            <span class="glyphicon glyphicon-remove"></span></a>
+                    </td>
                 </tr>
             </c:forEach>
         </table>
 
         <a href="<c:url value="/admin/productInventory/addProduct" /> " class="btn btn-primary">Add Product</a>
 
-        <%@include file="/WEB-INF/views/template/footer.jsp"%>
+        <%@include file="/WEB-INF/views/template/footer.jsp" %>
