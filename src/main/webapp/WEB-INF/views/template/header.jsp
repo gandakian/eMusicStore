@@ -22,6 +22,8 @@
     <!-- Bootstrap core CSS -->
     <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
 
+    <!-- Main CSS -->
+
 </head>
 
 <!-- NAVBAR
