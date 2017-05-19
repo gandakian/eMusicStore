@@ -14,6 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
+
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -95,11 +96,12 @@ public class HomeController {
 
         MultipartFile productImage = product.getProductImage();
         String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-        path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\" + product.getProductId() + ".png");
+        path = Paths.get(rootDirectory + "/WEB-INF/resources/images/" + product.getProductId() + ".png");
 
         if (productImage != null && !productImage.isEmpty()) {
             try {
                 productImage.transferTo(new File(path.toString()));
+                System.out.println(path + "********************************");
             } catch (Exception e) {
                 e.printStackTrace();
                 throw new RuntimeException("Product Image Saving Failed", e);
@@ -113,7 +115,7 @@ public class HomeController {
     public String deleteProduct(@PathVariable String id, Model model, HttpServletRequest request) {
 
         String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-        path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\" + id + ".png");
+        path = Paths.get(rootDirectory + "/WEB-INF/resources/images/" + id + ".png");
 
         if (Files.exists(path)) {
             try {
