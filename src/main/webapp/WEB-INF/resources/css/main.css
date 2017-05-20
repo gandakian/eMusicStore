@@ -19,7 +19,7 @@
 
 .container-wrapper {
     height: 80%;
-    margin:auto;
+    margin: auto;
     margin-top: 80px;
     margin-bottom: 300px;
 }
@@ -28,4 +28,14 @@
     display: block;
     width: 100% !important;
     height: auto !important;
+}
+
+.login-box {
+    text-align: center;
+}
+
+.login-container{
+    width: 40%;
+    margin: auto;
+    margin-top: 100px;
 }
